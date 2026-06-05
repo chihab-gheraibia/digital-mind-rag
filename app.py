@@ -35,14 +35,16 @@ from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 
-# Safe structural routing to ensure it runs on any recent LangChain version
+# Explicit version-agnostic structural routing bypassing the main legacy package wrapper
 try:
     from langchain.chains.retrieval_chain import create_retrieval_chain
     from langchain.chains.history_aware_retriever import create_history_aware_retriever
+    from langchain.chains.combine_documents import create_stuff_documents_chain
 except ImportError:
+    # Alternative direct fallback layout paths
     from langchain.chains import create_retrieval_chain, create_history_aware_retriever
+    from langchain.chains.combine_documents import create_stuff_documents_chain
 
-from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
