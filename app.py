@@ -29,19 +29,18 @@ if GROQ_API_KEY:
 if GOOGLE_API_KEY:
     os.environ["GOOGLE_API_KEY"] = GOOGLE_API_KEY
 
-# ── Modern LangChain imports ──────────────────────────────────────────────────
-# ── Modern LangChain imports ──────────────────────────────────────────────────
+# ── Robust LangChain imports ──────────────────────────────────────────────────
 from langchain_groq import ChatGroq
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 
-# Safe fallback for the retrieval chain factory functions
+# Safe structural routing to ensure it runs on any recent LangChain version
 try:
-    from langchain.chains import create_history_aware_retriever, create_retrieval_chain
-except ImportError:
-    from langchain.chains.retrieval import create_retrieval_chain
+    from langchain.chains.retrieval_chain import create_retrieval_chain
     from langchain.chains.history_aware_retriever import create_history_aware_retriever
+except ImportError:
+    from langchain.chains import create_retrieval_chain, create_history_aware_retriever
 
 from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain_community.document_loaders import PyPDFLoader
