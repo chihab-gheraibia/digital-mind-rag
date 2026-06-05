@@ -35,15 +35,19 @@ from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 
-# Explicit version-agnostic structural routing bypassing the main legacy package wrapper
+# Explicit version-agnostic structural routing
 try:
     from langchain.chains.retrieval_chain import create_retrieval_chain
     from langchain.chains.history_aware_retriever import create_history_aware_retriever
     from langchain.chains.combine_documents import create_stuff_documents_chain
 except ImportError:
-    # Alternative direct fallback layout paths
-    from langchain.chains import create_retrieval_chain, create_history_aware_retriever
-    from langchain.chains.combine_documents import create_stuff_documents_chain
+    try:
+        from langchain.chains import create_retrieval_chain, create_history_aware_retriever
+        from langchain.chains.combine_documents import create_stuff_documents_chain
+    except ImportError:
+        # Ultimate fallback path for ultra-modern/classic split architectural layouts
+        from langchain_classic.chains import create_retrieval_chain, create_history_aware_retriever
+        from langchain_classic.chains.combine_documents import create_stuff_documents_chain
 
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
