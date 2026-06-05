@@ -12,7 +12,7 @@
 
 <br/>
 
-**[🚀 Live Demo](https://your-app.streamlit.app)** · **[📖 Docs](#-local-setup)** · **[🐛 Report Bug](https://github.com/chihab-gheraibia/digital-mind-rag/issues)** · **[✨ Request Feature](https://github.com/chihab-gheraibia/digital-mind-rag/issues)**
+**[🚀 Live Demo](https://digital-mind-rag.streamlit.app/)** · **[📖 Docs](#-local-setup)** · **[🐛 Report Bug](https://github.com/chihab-gheraibia/digital-mind-rag/issues)** · **[✨ Request Feature](https://github.com/chihab-gheraibia/digital-mind-rag/issues)**
 
 <br/>
 
@@ -193,12 +193,29 @@ digital-mind-rag/
 
 <table>
   <tr>
-    <td align="center">
+    <!-- Creator -->
+    <td align="center" valign="top" width="14.28%">
       <a href="https://github.com/chihab-gheraibia">
         <img src="https://github.com/chihab-gheraibia.png" width="100px;" alt="Chihab Gheraibia"/><br/>
         <sub><b>Chihab Gheraibia</b></sub>
       </a><br/>
       <sub>Creator & Maintainer</sub>
+    </td>
+    <!-- Contributor 1: Omar -->
+    <td align="center" valign="top" width="14.28%">
+      <a href="https://github.com/omar-saifi">
+        <img src="https://github.com/omar-saifi.png" width="100px;" alt="Omar Elkhatab Saifi"/><br/>
+        <sub><b>Omar Elkhatab Saifi</b></sub>
+      </a><br/>
+      <sub>Core Developer</sub>
+    </td>
+    <!-- Contributor 2: Basset -->
+    <td align="center" valign="top" width="14.28%">
+      <a href="https://github.com/bassetlamraoui">
+        <img src="https://github.com/bassetlamraoui.png" width="100px;" alt="Abd El Basset Lamraoui"/><br/>
+        <sub><b>Abd El Basset Lamraoui</b></sub>
+      </a><br/>
+      <sub>Core Developer</sub>
     </td>
   </tr>
 </table>
@@ -215,7 +232,7 @@ Distributed under the MIT License. See [`LICENSE`](LICENSE) for more information
 
 <div align="center">
 
-Made with ❤️ by [Chihab Gheraibia](https://github.com/chihab-gheraibia)
+Made with ❤️ by [Chihab Gheraibia](https://github.com/chihab-gheraibia), [Omar Elkhatab Saifi](https://github.com/omar-saifi), and [Abd El Basset Lamraoui](https://github.com/bassetlamraoui)
 
 ⭐ **Star this repo if you find it useful!** ⭐
 
